@@ -1,0 +1,480 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: OpenSans;
+	font-weight: lighter;
+}
+
+html, body{
+	height: 100%;
+	font-size: 16px;
+}
+
+@font-face{
+	src: url('../fonts/OpenSans-Bold.ttf');
+	font-family: OpenSans;
+	font-weight: 700;
+}
+@font-face{
+	src: url('../fonts/OpenSans-Regular.ttf');
+	font-family: OpenSans;
+	font-weight: 400;
+}
+@font-face{
+	src: url('../fonts/OpenSans-Light.ttf');
+	font-family: OpenSans;
+	font-weight: 300;
+}
+
+
+/*	ELEMENTOS GERAIS
+================================================*/
+.clear{
+	clear: both;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 3%;
+}
+
+section{
+	padding: 20px 0;
+}
+
+
+.button{
+	user-select: none;
+	border-radius: 10px;
+	background-color: #2692FF;
+
+	border-top: 2px solid #eee;
+	border-left: 2px solid #eee;
+	border-bottom: 2px solid #bbb;
+	border-right: 2px solid #bbb;
+}
+.button:active{
+	border-top: 2px solid #bbb;
+	border-left: 2px solid #bbb;
+	border-bottom: 2px solid #eee;
+	border-right: 2px solid #eee;
+}
+
+
+.card{
+	box-shadow: 10px 10px 5px -5px rgba(0,0,0,.3);
+	border-bottom-right-radius: 50px;
+}
+
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	z-index: 1;
+}
+
+.sobre-overlay{
+	position: relative;
+	z-index: 2;
+}
+
+/*	=================================================
+			FORMATAÇÃO DO LAYOUT
+================================================*/
+
+.section-inicio{
+	background-image: url('../images/bg1.jpg');
+	background-size: cover;
+	background-position: center;
+	min-height: 900px;
+	position: relative;
+	display: block;
+}
+	
+	.section-inicio .header-principal{
+		border-bottom: 2px solid #ccc;
+	}
+
+		.section-inicio .header-principal .icons-social{
+			float: right;
+			font-size: 20px;
+		}	
+			.section-inicio .header-principal .icons-social a:hover{
+				background-color: rgba(255,255,255,0.2);
+			}
+				.section-inicio .header-principal .icons-social a i{
+					color: white;
+					margin: 0 10px;
+				}
+
+		.section-inicio .header-principal .logo_menu{
+			padding-top: 20px;
+			display: flex;
+			align-items: center;
+			flex-wrap: nowrap;
+		}
+			.section-inicio .header-principal .logo_menu .logo{
+				color: white;
+				font-size: 2.5rem;
+				width: 50%;
+				user-select: none;
+			}
+
+			.section-inicio .header-principal .logo_menu .menu-mobile,
+			.section-inicio .header-principal .logo_menu .menu-mobile ul{
+				display: none;
+			}
+
+			.section-inicio .header-principal .logo_menu .menu-desktop{
+				float: right;
+				width: 50%;
+			}
+				.section-inicio .header-principal .logo_menu .menu-desktop ul{
+					list-style-type: none;
+					float: right;
+				}
+					.section-inicio .header-principal .logo_menu .menu-desktop ul li{
+						float: left;
+					}
+						.section-inicio .header-principal .logo_menu .menu-desktop ul li a{
+							color: white;
+							text-decoration: none;
+							font-size: 1.2rem;
+							padding: 10px;
+						}
+						.section-inicio .header-principal .logo_menu .menu-desktop ul li a:hover{
+							text-decoration: underline;
+						}
+
+	.section-inicio .section-chamada{
+		max-width: 900px;
+		margin-top: 100px;
+		color: white;
+	}
+		.section-inicio .section-chamada h1{
+			font-size: 2.5rem;
+			text-align: center;
+		}
+			.section-inicio .section-chamada h1	span{
+				color: #2692FF;
+			}
+
+		.section-inicio .section-chamada p{
+			font-size: 1.2rem;
+			text-align: justify;
+			text-indent: 50px;
+			padding: 10px 0;
+		}
+
+		.section-inicio .section-chamada button a{
+			display: block;
+			font-size: 1.3rem;
+			color: white;
+			text-decoration: none;
+			padding: 10px 30px;
+		}
+
+
+main .section-planos{
+	background: linear-gradient(#eee, #fff, #eee);
+}
+
+	main .section-planos .titulo {
+		padding: 20px 0;
+		text-align: center;
+	}
+	main .section-planos .titulo h1{
+		display: inline-block;
+		border-top: 2px solid #2692FF;
+		color: #2692FF;
+		font-size: 2em;
+	}
+
+	main .section-planos .cards-preco-wrapper{
+		display: flex;
+		align-items: center;
+	}
+
+		main .section-planos .cards-preco-wrapper .card-preco{
+			width: calc(100% / 3);
+			margin: 20px;
+			border: 1px solid #ccc;
+		}
+			main .section-planos .cards-preco-wrapper .card-preco h2{
+				width: 100%;
+				text-align: center;
+				background-color: #2692FF;
+				color: white;
+				padding: 10px 0;
+			}
+
+			main .section-planos .cards-preco-wrapper .card-preco .especificacoes{
+				margin-top: 10px;
+				padding-left: 20px;
+			}
+				main .section-planos .cards-preco-wrapper .card-preco .especificacoes p{
+					padding: 5px 0;
+					font-variant: small-caps;
+					font-size: 16px;
+				}
+					main .section-planos .cards-preco-wrapper .card-preco .especificacoes p i{
+						padding-right: 10px;
+					}
+
+			main .section-planos .cards-preco-wrapper .card-preco .preco{
+				padding: 20px 0;
+				text-align: center;
+			}
+				main .section-planos .cards-preco-wrapper .card-preco .preco h3{
+					display: inline-block;
+					font-size: 1.8rem;
+					border-top: 1px solid #aaa;
+				}
+
+
+main .section-sobre{
+	position: relative;
+	background-image: url('../images/bg_parallax.jpg');
+	background-size: cover;
+	background-position: 0 100%;
+	background-attachment: fixed;
+	/*min-height: 500px;*/
+	padding: 100px 0;
+}
+
+	main .section-sobre .sobre{
+		color: white;
+		max-width: 1000px;
+		margin: 0 auto;	
+	}
+
+		main .section-sobre .sobre h1{
+			font-size: 2.5rem;
+			text-align: center;
+		}
+			main .section-sobre .sobre h1 span{
+				color: #2692FF;
+			}
+		main .section-sobre .sobre p{
+			padding: 5px 0;
+			text-align: justify;
+			text-indent: 50px;
+		}
+
+
+main .section-contato_time{
+	display: flex;
+	padding: 50px 0;
+	flex-wrap: wrap;
+}	
+	
+	main .section-contato_time .titulo{
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	main .section-contato_time .titulo h1{
+		font-size: 2rem;
+	}
+	main .section-contato_time .titulo h1 > .linha{
+		width: 50px;
+		height: 2px;
+		background-color: black;
+		transition: 1s;
+	}
+	main .section-contato_time .titulo h1:hover > .linha{
+		width: 100px;
+	}
+
+
+	main .section-contato_time .contato{
+		width: 40%;
+		padding: 0 20px;
+	}
+		main .section-contato_time .contato .form-contato input:not([type=submit]),
+		main .section-contato_time .contato .form-contato textarea{
+			width: 100%;
+			display: block;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 0;
+			border-bottom: 1px solid #ccc;
+		}
+
+		main .section-contato_time .contato .form-contato textarea{
+			resize: vertical;
+			height: 120px;
+		}
+
+		main .section-contato_time .contato .form-contato input[type=submit]{
+			padding: 10px 40px;
+			color: white;
+			font-size: 20px;
+		}
+
+		main .section-contato_time .contato .form-contato input:focus,
+		main .section-contato_time .contato .form-contato textarea:focus{
+			outline: 0;
+		}
+
+
+	main .section-contato_time .time{
+		width: 60%;
+		padding: 0 20px;
+	}
+		main .section-contato_time .time .card-membro-wrapper{
+			float: left;
+			width: 50%;
+			padding: 10px;
+		}
+			main .section-contato_time .time .card-membro-wrapper .card-membro{
+				padding: 20px 20px;
+			}
+				main .section-contato_time .time .card-membro-wrapper .card-membro .perfil{
+					display: flex;
+					align-items: center;
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					border-bottom: 1px solid #ccc;
+				}
+					main .section-contato_time .time .card-membro-wrapper .card-membro .perfil .foto{
+						width: 50px;
+						height: 50px;
+						background-color: #ccc;
+						border-radius: 50%;
+						margin-right: 10px;
+					}
+
+					main .section-contato_time .time .card-membro-wrapper .card-membro .perfil .nome_funcao h2{
+						font-size: 1.2rem;
+						font-weight: normal;
+					}
+
+				main .section-contato_time .time .card-membro-wrapper .card-membro .bio{
+					color: #bbb;
+					text-align: justify;
+					font-size: 0.9rem;
+				}
+
+
+footer{
+	background-color: #252525;
+	text-align: center;
+	color: white;
+	padding: 20px 0;
+	font-size: 1.2rem;
+}
+
+/*	MEDIA QUERIES
+================================================*/
+
+@media screen and (max-width: 1200px){
+	html, body{
+		font-size: 15.5px;
+	}
+
+}
+
+
+@media screen and (max-width: 992px){
+	html, body{
+		font-size: 15px;
+	}
+
+	main .section-planos .cards-preco-wrapper{
+		flex-direction: column;
+	}
+		main .section-planos .cards-preco-wrapper .card-preco{
+			width: 50%;
+		}
+
+
+	main .section-contato_time .time .card-membro-wrapper{
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	html, body{
+		font-size: 14px;
+	}
+
+	.section-inicio .header-principal .logo_menu{
+		flex-direction: column;
+		text-align: center;
+	}
+	.section-inicio .header-principal .logo_menu .menu-desktop{
+		display: none;
+	}
+
+	.section-inicio .header-principal .logo_menu .menu-mobile{
+		display: block;
+		width: 100%;
+	}	
+		.section-inicio .header-principal .logo_menu .menu-mobile{
+			padding: 20px 0;
+			display: block;
+			width: 100%;
+		}
+
+			.section-inicio .header-principal .logo_menu .menu-mobile .icon-menu{
+				text-align: right;
+			}
+			.section-inicio .header-principal .logo_menu .menu-mobile .icon-menu i{
+				color: white;
+				font-size: 40px;
+				cursor: pointer;
+			}
+
+			.section-inicio .header-principal .logo_menu .menu-mobile ul{
+				width: 100%;
+				list-style-type: none;
+			}
+				.section-inicio .header-principal .logo_menu .menu-mobile ul li{
+					text-align: center;
+					border-bottom: 1px solid #444;
+				}
+					.section-inicio .header-principal .logo_menu .menu-mobile ul li a{
+						font-size: 1.2rem;
+						display: block;
+						background-color: transparent;
+						color: white;
+						padding: 10px 0;
+						text-decoration: none;
+						transition: 1s;
+					}
+					.section-inicio .header-principal .logo_menu .menu-mobile ul li a:hover{
+						background-color: rgba(255,255,255,0.2);
+
+					}
+
+
+	main .section-planos .cards-preco-wrapper .card-preco{
+		width: 80%;
+	}
+
+	main .section-contato_time .contato,
+	main .section-contato_time .time{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+}
+
+
+@media screen and (max-width: 576px){
+	html, body{
+		font-size: 13px;
+	}
+
+	main .section-planos .cards-preco-wrapper .card-preco{
+		width: 100%;
+	}
+}
+
+
