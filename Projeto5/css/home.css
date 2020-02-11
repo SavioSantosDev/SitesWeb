@@ -1,0 +1,297 @@
+/*==================================================
+		SECTION CHAMADA
+==================================================*/
+main{
+	/*overflow: hidden;*/
+}
+.section-chamada{
+	height: 600px;
+	/*min-width: 1000px;*/
+	background-image: url('../images/bg.png');
+	background-size: 100% 100%;
+	background-position: 100% 100%;	
+	background-repeat: no-repeat;
+	background-color: black;
+}
+
+.section-chamada .container-center{
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.section-chamada .container-center .chamada{
+	width: 100%;	
+	color: white;
+	margin: 0 auto;
+}
+
+.section-chamada .container-center .chamada div p{
+	background-color: #EB2D2D;
+	display: inline-block;
+	font-size: 33px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.section-chamada .container-center .chamada div:nth-of-type(1) p{
+	transform: translateX(90px) skewX(-20deg);
+}
+.section-chamada .container-center .chamada div:nth-of-type(2) p{
+	transform: translateX(60px) skewX(-20deg);
+}
+.section-chamada .container-center .chamada div:nth-of-type(3) p{
+	transform: translateX(30px) skewX(-20deg);
+}
+.section-chamada .container-center .chamada div:nth-of-type(4) p{
+	transform: translateX(0px) skewX(-20deg);
+	color: black;
+	background-color: white;
+}
+
+/*==================================================
+		SECTION VEICULOS DESTAQUE
+==================================================*/
+.section-veiculos-destaque .container-center{
+	max-width: 850px;
+}
+
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo{
+	width: calc(100% / 3);
+	margin: 0 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo .img-veiculo{
+	display: block;
+	padding-top: 80%;
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo:nth-of-type(1) .img-veiculo{
+	background-image: url('../images/imgCar1.jpg');
+}
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo:nth-of-type(2) .img-veiculo{
+	background-image: url('../images/imgCar2.jpg');
+}
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo:nth-of-type(3) .img-veiculo{
+	background-image: url('../images/imgCar3.jpg');
+}
+
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo .resumo-veiculo{
+	padding-top: 10px;
+	min-height: 110px;
+	text-align: center;
+}
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo .resumo-veiculo h2{
+	/*text-align: center;*/
+	font-style: italic;
+	font-weight: normal;
+}
+
+.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo .button{
+	width: 70%;
+	margin: 0 auto;
+}
+/*==================================================
+		SECTION SERVIÇOS
+==================================================*/
+.section-servicos-depoimentos{
+	display: flex;
+	color: white;
+}
+
+
+.section-servicos-depoimentos .section-servicos{
+	width: 50%;
+	padding: 80px 2%;
+	background-color: #252525;
+}
+
+/*SERVIÇOS E DEPOIMENTOS*/
+.section-servicos-depoimentos .section-servicos .servicos{
+	max-width: 500px;
+	/*background-color: #ccc;*/
+	margin: 0 auto;
+}
+
+.section-servicos-depoimentos .section-servicos .servicos h2,
+.section-servicos-depoimentos .section-depoimentos .depoimentos h2{
+	padding-bottom: 20px;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 30px;
+}
+
+.section-servicos-depoimentos .section-servicos .servicos ul{
+	list-style-position: outside;
+	display: inline-block;
+	padding-right: 20%;
+}
+.section-servicos-depoimentos .section-servicos .servicos ul li{
+	font-variant: small-caps;
+	font-size: 20px;
+	position: relative;
+	left: 25px;
+}
+
+.section-servicos-depoimentos .section-servicos .servicos .button{
+	display: inline-block;
+	width: auto;
+	vertical-align: bottom;
+}
+
+/*==================================================
+		SECTION DEPOIMENTOS
+==================================================*/
+.section-servicos-depoimentos .section-depoimentos{
+	width: 50%;
+	padding: 80px 2%;
+	background-color: #EB2D2D;
+	font-style: italic;
+	/*overflow: hidden;*/
+}
+
+.section-servicos-depoimentos .section-depoimentos .depoimentos{
+	max-width: 500px;
+	/*background-color: #ccc;*/
+	margin: 0 auto;
+}
+
+.section-servicos-depoimentos .section-depoimentos .depoimentos .slider{
+	width: 100%;
+	overflow: hidden;
+}
+
+.section-servicos-depoimentos .section-depoimentos .depoimentos .slider .depoimentos-wrapper .depoimento-single{
+	float: left;
+	display: none;
+	position: relative;
+	z-index: 1;
+}
+
+.section-servicos-depoimentos .section-depoimentos .depoimentos .slider .depoimentos-wrapper .depoimento-single .autor{
+	float: right;
+	color: black;
+	padding: 20px 10px 0 0;
+	/*position: relative;*/
+	/*top: 40px;*/
+}
+
+/*    SETAS    */
+.section-servicos-depoimentos .section-depoimentos .depoimentos .bullets-wrapper{
+	width: 100%;
+	/*position: relative;*/
+	top: -20px;
+	z-index: 0;
+}
+.section-servicos-depoimentos .section-depoimentos .depoimentos .bullets-wrapper span{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	/*background-color: #ccc;*/
+	border-radius: 100%;
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+
+/*==================================================
+		MEDIA QUERIES
+==================================================*/
+
+@media screen and (max-width: 1280px){
+	.section-chamada{
+		background-size: 105% 100%;
+	}
+	.section-chamada .container-center .chamada div p{
+		font-size: 30px;
+	}
+}
+
+
+@media screen and (max-width: 1040px){
+	.section-chamada{
+		background-size: 110% 100%;
+	}
+}
+
+
+@media screen and (max-width: 920px){
+	.section-chamada{
+		background-size: 115% 100%;
+	}
+
+
+	.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo .button{
+		width: 100%;
+	}
+
+
+	.section-servicos-depoimentos{
+		display: flex;
+		flex-direction: column;
+	}
+	.section-servicos-depoimentos .section-servicos,
+	.section-servicos-depoimentos .section-depoimentos{
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	.section-chamada{
+		background-size: 120% 100%;
+	}
+	.section-chamada .container-center .chamada div p{
+		font-size: 27px;
+		padding: 8px;
+		margin-bottom: 8px;
+	}
+
+	.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo .resumo-veiculo{
+		min-height: 130px;
+	}
+}
+
+@media screen and (max-width: 560px){
+
+	.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo{
+		width: 50%;
+	}
+	.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo:nth-of-type(3){
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 450px){
+	.section-chamada .container-center .chamada div:nth-of-type(4) p{
+		font-size: 20px;
+	}
+}
+
+
+@media screen and (max-width: 360px){
+	.section-chamada .container-center .chamada div:nth-of-type(4) p{
+		font-size: 16px;
+	}
+
+	.section-veiculos-destaque .container-center .veiculos-destaque-wrapper{
+		flex-direction: column;
+	}
+	.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo{
+		width: 100%;
+		margin: 0 0 20px 0;
+	}
+	.section-veiculos-destaque .container-center .veiculos-destaque-wrapper .veiculo .resumo-veiculo{
+		min-height: 80px;
+	}
+}

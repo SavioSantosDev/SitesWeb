@@ -1,0 +1,211 @@
+.section-venda .container-center{
+	display: flex;
+	padding-top: 0;
+}
+
+
+/*=========================================================================
+		ASSIDE DE FILTRO
+=========================================================================*/
+.section-venda .container-center .aside-filtro{
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	padding-right: 50px;
+}
+
+.section-venda .container-center .aside-filtro .filtro-preco-wrapper{
+	padding-bottom: 70px;
+}
+.section-venda .container-center .aside-filtro .filtro-preco-wrapper .filtro-preco > h2,
+.aside-filtro .filtro-periodo-wrapper .filtro-periodo > h2{
+	padding-bottom: 20px;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.section-venda .container-center .aside-filtro .filtro-preco-wrapper .filtro-preco{
+	width: 100%;
+}
+
+.section-venda .container-center .aside-filtro .filtro-preco-wrapper .filtro-preco .barra-filtro{
+	width: 100%;
+	height: 20px;
+	border: 1px solid #252525;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	user-select: none;
+}
+.section-venda .container-center .aside-filtro .filtro-preco-wrapper .filtro-preco .barra-filtro .preenchimento-barra{
+	width: 0%;/*JQ*/
+	background: linear-gradient(#ddd, #eee, #ddd);
+	height: 100%;
+	border-radius: 10px;
+}
+.section-venda .container-center .aside-filtro .filtro-preco-wrapper .filtro-preco .barra-filtro .bola-barra{
+	width: 30px;
+	height: 30px;
+	background: linear-gradient(#ddd, #eee, #ddd);
+	border: 1px solid #252525;
+	border-radius: 10px;
+	position: absolute;
+	top: -5px;/*JQ*/
+	left: 0%;/*JQ*/
+	transform: translate(-50%, 0%);
+	cursor: pointer;
+}
+
+.section-venda .container-center .aside-filtro .filtro-preco-wrapper .filtro-preco p:first-of-type{
+	float: left;
+}
+.section-venda .container-center .aside-filtro .filtro-preco-wrapper .filtro-preco p:last-of-type{
+	float: right;
+}
+
+
+/*ESPECIFICAR A PARTIR DO ASIDE POIS VAI USAR NA PAGINA DE EVENTOS TAMBÉM*/
+.aside-filtro .filtro-periodo-wrapper .filtro-periodo{
+	width: 100%;
+}
+
+.aside-filtro .filtro-periodo-wrapper .filtro-periodo .periodo-wrapper input[type=checkbox]{
+	display: none;
+}
+.aside-filtro .filtro-periodo-wrapper .filtro-periodo .periodo-wrapper label{
+	display: block;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding: 5px 0;
+	border-bottom: 1px solid #ccc;
+	user-select: none;
+}
+
+.aside-filtro .filtro-periodo-wrapper .filtro-periodo .periodo-wrapper label .caixa{
+	width: 17px;
+	height: 17px;
+	border: 1px solid #ccc;
+}
+.aside-filtro .filtro-periodo-wrapper .filtro-periodo .periodo-wrapper label .caixa .ball{
+	display: none;
+	width: 50%;
+	height: 50%;
+	background-color: #252525;
+	border-radius: 100%;
+	transform: translate(50%, 50%);
+}
+.aside-filtro .filtro-periodo-wrapper .filtro-periodo .periodo-wrapper input[type=checkbox]:checked + label .caixa .ball{
+	display: block;
+}
+
+.aside-filtro .filtro-periodo-wrapper .filtro-periodo .periodo-wrapper label p.periodo{
+	padding-left: 5px;
+}
+
+/*=========================================================================
+		SESSÃO DE VENDAS
+=========================================================================*/
+.section-venda .container-center .section-veiculos{
+	width: 65%;
+}
+
+.section-venda .container-center .section-veiculos .veiculo{
+	width: calc(100% / 3);
+	float: left;
+	display: flex;
+	flex-direction: column;
+	padding: 0 15px 70px 15px;
+	/*background-color: #ccc;*/
+}
+
+.section-venda .container-center .section-veiculos .veiculo .img-veiculo{
+	padding-top: 100%;
+	background-color: #ccc;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.section-venda .container-center .section-veiculos .veiculo:nth-of-type(1) .img-veiculo{
+	background-image: url('../images/imgCar1.jpg');
+}
+.section-venda .container-center .section-veiculos .veiculo:nth-of-type(2) .img-veiculo{
+	background-image: url('../images/imgCar2.jpg');
+}
+.section-venda .container-center .section-veiculos .veiculo:nth-of-type(3) .img-veiculo{
+	background-image: url('../images/imgCar3.jpg');
+}
+.section-venda .container-center .section-veiculos .veiculo:nth-of-type(4) .img-veiculo{
+	background-image: url('../images/imgCar4.jpg');
+}
+.section-venda .container-center .section-veiculos .veiculo:nth-of-type(5) .img-veiculo{
+	background-image: url('../images/imgCar5.jpg');
+}
+.section-venda .container-center .section-veiculos .veiculo:nth-of-type(6) .img-veiculo{
+	background-image: url('../images/imgCar6.jpg');
+}
+
+.section-venda .container-center .section-veiculos .veiculo .resumo-veiculo{
+	min-height: 120px;
+	text-align: center;
+	font-style: italic;
+}
+.section-venda .container-center .section-veiculos .veiculo .resumo-veiculo h2{
+	font-weight: normal;
+}
+
+
+/*=========================================================================
+		MEDIA QUERIES
+=========================================================================*/
+@media screen and (max-width: 1040px){
+	.section-venda .container-center{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.section-venda .container-center .aside-filtro{
+		width: 100%;
+		flex-direction: row;
+		padding: 0 0 50px 0;
+	}
+	.section-venda .container-center .aside-filtro .filtro-preco-wrapper,
+	.section-venda .container-center .aside-filtro .filtro-periodo-wrapper{
+		width: 50%;
+		padding: 0 20px;
+	}
+
+	.section-venda .container-center .section-veiculos{
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	.section-venda .container-center .section-veiculos .veiculo{
+		width: 50%;
+	}	
+}
+
+
+@media screen and (max-width: 540px){
+	.section-venda .container-center .aside-filtro{
+		flex-direction: column;
+		padding: 0 20px 50px 20px;
+	}
+	.section-venda .container-center .aside-filtro .filtro-preco-wrapper,
+	.section-venda .container-center .aside-filtro .filtro-periodo-wrapper{
+		width: 100%;
+		padding: 0;
+	}
+	.section-venda .container-center .aside-filtro .filtro-preco-wrapper{
+		padding-bottom: 50px;
+	}
+}
+
+
+@media screen and (max-width: 420px){
+	.section-venda .container-center .section-veiculos .veiculo{
+		width: 100%;
+	}	
+}
