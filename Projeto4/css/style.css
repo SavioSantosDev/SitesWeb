@@ -1,0 +1,411 @@
+html{
+	font-size: 16px;
+}
+
+
+/*		FONTES
+=======================================================*/
+@font-face{
+	src: url('../fonts/OpenSans-Bold.ttf');
+	font-family: OpenSans;
+	font-weight: 700;
+}
+@font-face{
+	src: url('../fonts/OpenSans-Regular.ttf');
+	font-family: OpenSans;
+	font-weight: 400;
+}
+@font-face{
+	src: url('../fonts/OpenSans-Light.ttf');
+	font-family: OpenSans;
+	font-weight: 300;
+}
+
+.open-sans{
+	font-family: OpenSans;
+}
+
+
+/*		CORES
+=======================================================*/
+
+.texto-cinza{
+	color: #708090;
+}
+.bg-cinza{
+	background-color: #708090;
+}
+
+.bg-azul-light{
+	background-color: #f0ffff
+}
+
+
+/*		ELEMENTOS GERAIS
+=======================================================*/
+
+.row{
+	margin: 0;
+}
+
+.slider-window{
+	overflow: hidden;
+}
+	.slider-window .slider-wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		user-select: none;
+		position: relative;
+		z-index: 1;
+		/*border: 1px solid black;*/
+	}
+		.arrow{
+			display: none;
+			position: absolute;
+			height: 100%;
+			padding: 0 20px;
+			background-color: rgba(0,0,0,.4);
+			cursor: pointer;
+			z-index: 2;
+		}
+			.arrow span{
+				display: block;
+				position: relative;
+				top: 50%;
+				transform: translate(0,-50%);
+				font-size: 40px;
+				color: white;
+			}
+	
+		.arrow.next{right: 0;}
+		.arrow.prev{left: 0;}
+
+			/*animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+			.arrow.prev:hover span{
+				-webkit-animation: animPrev 1s infinite;
+				-moz-animation: animPrev 1s infinite;
+				animation: animPrev 1s infinite;
+			}
+			.arrow.next:hover span{
+				-webkit-animation: animNext 1s infinite;
+				-moz-animation: animNext 1s infinite;
+				animation: animNext 1s infinite;
+			}
+				@keyframes animPrev{
+					0%	{transform: translate(0%,-50%);}
+					50%	{transform: translate(-20%,-50%);}
+					100%{transform: translate(0%,-50%);}
+				}
+				@keyframes animNext{
+					0%	{transform: translate(0%,-50%);}
+					50%	{transform: translate(20%,-50%);}
+					100%{transform: translate(0%,-50%);}
+				}
+
+
+.img-slider:nth-of-type(1){background-image: url('../images/mosaico1.jpg');}
+.img-slider:nth-of-type(2){background-image: url('../images/mosaico2.jpg');}
+.img-slider:nth-of-type(3){background-image: url('../images/mosaico3.jpg');}
+.img-slider:nth-of-type(4){background-image: url('../images/mosaico4.jpg');}
+.img-slider:nth-of-type(5){background-image: url('../images/mosaico5.jpg');}
+.img-slider:nth-of-type(6){background-image: url('../images/mosaico6.jpg');}
+
+.img-slider:nth-of-type(7){background-image: url('../images/mosaico7.jpg');}
+.img-slider:nth-of-type(8){background-image: url('../images/mosaico8.jpg');}
+.img-slider:nth-of-type(9){background-image: url('../images/mosaico9.jpg');}
+.img-slider:nth-of-type(10){background-image: url('../images/mosaico10.jpg');}
+.img-slider:nth-of-type(11){background-image: url('../images/mosaico11.jpg');}
+.img-slider:nth-of-type(12){background-image: url('../images/mosaico12.jpg');}
+
+.img-slider:nth-of-type(13){background-image: url('../images/mosaico13.jpg');}
+.img-slider:nth-of-type(14){background-image: url('../images/mosaico14.jpg');}
+.img-slider:nth-of-type(15){background-image: url('../images/mosaico15.jpg');}
+.img-slider:nth-of-type(16){background-image: url('../images/mosaico16.jpg');}
+.img-slider:nth-of-type(17){background-image: url('../images/mosaico17.jpg');}
+.img-slider:nth-of-type(18){background-image: url('../images/mosaico18.jpg');}
+
+.img-slider:hover{
+	transform: scale(1.1,1.1);
+}
+
+
+
+/*		MENU
+=======================================================*/
+#menuNavegacao .navbar-brand{
+	background-image: url('../images/logo.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 200px;
+}
+
+
+#menuNavegacao .navbar-toggler{
+	font-size: 30px;
+}
+	#menuNavegacao .navbar-toggler:focus{
+		outline: none;
+	}
+
+#menuNavegacao .nav-link:hover{
+	transform: scale(1.1, 1.1);
+}
+
+
+/*		CONTEUDO PRINCIPAL
+=======================================================*/
+
+main{
+	position: relative;
+}
+
+
+#sectionGaleriaPrincipal .img-slider{
+	min-height: 200px;
+	background-color: #ccc;
+	background-size: 100% 100%;
+	margin:  5px;
+}
+
+
+#sectionCuidados{
+	position: relative;
+	top: -60px;
+	z-index: 4;
+}
+	#sectionCuidados .cuidados-wrapper{
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+	}
+		#sectionCuidados .cuidados-wrapper .caixa-cuidados{
+			padding: 20px;
+			border: 2px solid white;
+		}
+			#sectionCuidados .cuidados-wrapper .caixa-cuidados .cuidados h4{font-size: 1.1rem;}
+			#sectionCuidados .cuidados-wrapper .caixa-cuidados .cuidados p{font-size: 0.75rem;}
+			#sectionCuidados .cuidados-wrapper .caixa-cuidados .cuidados h5 i{font-size: 1.3rem;}
+		
+		#sectionCuidados .cuidados-wrapper .caixa-cuidados.caixa-principal{
+			padding: 50px 20px;
+			/*border-radius: 20px;*/
+			z-index: 2;
+		}
+		#sectionCuidados .cuidados-wrapper .caixa-cuidados.caixa-secundaria{z-index: 1;}
+
+
+#sectionPerfil .perfil{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+	#sectionPerfil .img-perfil-wrapper{
+		width: 40%;
+		margin: 0 auto;
+	}
+		#sectionPerfil .img-perfil{
+			background-color: #ccc;
+			background-image: url('../images/perfil.jpg');
+			background-size: 100% 100%;
+			padding-top: 120%;
+		}
+	#sectionPerfil .resumo-wrapper{
+		width: 60%;
+		padding: 0 20px;
+	}
+		#sectionPerfil .resumo ul li{
+			text-align: justify;
+			margin: 10px 0;
+		}
+
+
+#sectionDepoimentos .container-md{
+	max-width: 540px;
+}
+	#sectionDepoimentos .depoimento .cliente{
+		display: flex;
+		align-items: center;
+	}
+		#sectionDepoimentos .depoimento .cliente .img{
+			background-color: #ccc;
+			border-radius: 50%;
+			width: 50px;
+			min-height: 50px;
+			margin-right: 10px;
+			margin-left: auto;
+		}
+		#sectionDepoimentos .depoimento .cliente .nome{
+			margin-right: auto;
+		}
+
+#sectionSocial .container-sm{
+	max-width: 540px;/*Reescrevendo*/
+}
+
+
+#sectionSocial .social{
+	text-align: center;
+}	
+	#sectionSocial .social p{
+		margin: 0;/*Por padrão o bootstrap colocar margin nos paragrafos*/
+	}
+	#sectionSocial .social h4 i{
+		font-size: 30px;
+	}
+
+
+#sectionSocial #sectionGaleriaSecundaria{
+	box-shadow: 0 0 100px 0px #708090;
+}
+#sectionSocial #sectionGaleriaSecundaria .img-slider{
+	height: 175px;
+	background-size: 100% 100%;
+}
+	
+
+
+#sectionContato .container{
+	max-width: 600px;
+}
+
+	#sectionContato form .form-item{
+		margin: 30px 0;
+	}
+		#sectionContato form .form-item label{
+			display: block;
+			width: 100%;
+			margin: 0;
+			cursor: pointer;
+			font-variant: small-caps;
+		}
+		#sectionContato form .form-item .campo-entrada{
+			display: block;
+			width: 100%;
+			border: none;
+			background-color: transparent;
+			border-bottom: 1px solid #708090;
+			color: #708090;
+			transition: 0.5s;
+		}
+		#sectionContato form .form-item .campo-entrada:focus{
+			outline: 0;
+			border-bottom-color: rgb(50, 255, 50);
+			padding: 10px;
+		}
+		#sectionContato form .form-item textarea{
+			resize: none;
+			transition: 1s;
+		}
+	#sectionContato form button{
+		border: 0;
+		box-shadow: 0 0 5px #f8f9fa inset;
+	}
+		#sectionContato form button:hover{box-shadow: none;}
+		#sectionContato form button:focus{outline: 0;}
+
+
+#footerGeral .logotipo{
+	background-color: #607080;
+}
+	#footerGeral .logotipo a .logo-danki{
+		background-image: url('../images/logo-danki.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		height: 30px;
+		width: 150px;
+	}
+
+/*===========================================================================================================*/
+
+
+/*   ENQUANTO A TELA FOR MAIOR QUE 992PX   */
+@media screen and (min-width: 992px){
+
+	html{font-size: 15px;}
+
+
+	#menuNavegacao .nav-item{margin: 0 20px;}
+
+
+	#sectionCuidados .cuidados-wrapper{max-width: 960px}
+
+}
+
+/*   TEMANHOS MENORES QUE 992PX   */
+@media screen and (max-width: 992px){
+
+	html{font-size: 14.5px;}
+
+
+	#menuNavegacao .nav-item{
+		text-align: center;
+		border-bottom: 1px solid #508080;
+	}
+
+
+	#sectionCuidados .cuidados-wrapper{max-width: 720px}
+
+
+	#sectionPerfil .img-perfil-wrapper{width: 70%;}
+		#sectionPerfil .img-perfil{padding-top: 90%;}
+	
+	#sectionPerfil .resumo-wrapper{
+		width: 100%;
+		padding: 30px 0;
+	}
+
+
+	#footerGeral #sectionDadosContato .dados-contato{margin-bottom: 20px;}
+}
+
+
+/*   TEMANHOS MENORES QUE 768px   */
+@media screen and (max-width: 768px){
+
+	html{font-size: 14px;}
+
+
+	#sectionCuidados .cuidados-wrapper{
+		max-width: 560px;
+		flex-direction: column;
+	}
+		#sectionCuidados .cuidados-wrapper .caixa-cuidados.caixa-principal{width: 70%;}
+		#sectionCuidados .cuidados-wrapper .caixa-cuidados.caixa-secundaria{width: 60%;}
+
+
+	#sectionPerfil .img-perfil-wrapper{width: 80%;}
+		#sectionPerfil .img-perfil{padding-top: 90%;}
+
+}
+
+
+/*   TEMANHOS MENORES QUE 576px   */
+@media screen and (max-width: 576px){
+
+
+	#sectionCuidados .cuidados-wrapper{max-width: 100%;}
+		#sectionCuidados .cuidados-wrapper .caixa-cuidados.caixa-principal{width: 80%;}
+		#sectionCuidados .cuidados-wrapper .caixa-cuidados.caixa-secundaria{width: 70%;}
+
+
+	#sectionTratamentos .slider-window .slider-wrapper{width: 300%;}
+		#sectionTratamentos .slider-window .slider-wrapper .slider-single{width: 100%;}
+
+}
+
+
+/*   TEMANHOS MENORES QUE 360px   */
+@media screen and (max-width: 576px){
+
+	html{font-size: 13.5px;}
+
+	#sectionCuidados .cuidados-wrapper .caixa-cuidados.caixa-principal{width: 90%;}
+	#sectionCuidados .cuidados-wrapper .caixa-cuidados.caixa-secundaria{width: 80%;}
+}
+
+
+
+

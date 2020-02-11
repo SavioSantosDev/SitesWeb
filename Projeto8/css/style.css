@@ -1,0 +1,104 @@
+
+@font-face{
+	src: url('../fonts/OpenSans-Bold.ttf');
+	font-weight: 700;
+	font-family: OpenSans;
+}
+@font-face{
+	src: url('../fonts/OpenSans-Regular.ttf');
+	font-weight: 400;
+	font-family: OpenSans;
+}
+@font-face{
+	src: url('../fonts/OpenSans-Light.ttf');
+	font-weight: 300;
+	font-family: OpenSans;
+}
+
+.open-sans{
+	font-family: OpenSans  !important;
+}
+
+.bg-cinza{
+	background-color: #eee;
+}
+
+.overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.6);
+	z-index: 1;
+}
+.sobre-overlay{
+	position: relative;
+	z-index: 2;
+}
+
+input.form-control,
+textarea.form-control{
+	transition: 0.5s;
+}
+input.form-control:focus,
+textarea.form-control:focus{
+	transform: scale(1.02,1.1);
+	box-shadow: none;
+}
+
+
+
+/*  SESSÃO DO MENU DE NAVEGAÇÃO  
+=========================================*/
+.section-menu-navegacao .customizar.navbar-brand{
+	background-image: url('../images/logo-danki.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 200px;
+	height: 50px;
+}
+
+.section-menu-navegacao .customizar.navbar-nav li a:hover{
+	transform: scale(1.2,1.2);
+}
+
+/*  SESSÃO PRINCIPAL PÓS MENU DE NAVEGAÇÃO
+===============================================*/
+main{
+	position: relative;
+}
+
+	main .section-apresentacao{
+		background-image: url('../images/bg.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		padding: 170px 0;
+		position: relative;
+	}
+
+	main .section-sobre .arrow i{
+		font-size: 40px;
+	}
+
+
+@media screen and (max-width: 992px){
+	main .section-apresentacao{
+		padding: 100px 0;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+
+	.section-menu-navegacao .customizar.navbar-nav{
+		padding: 20px 0;
+	}
+	.section-menu-navegacao .customizar.navbar-nav li{
+		text-align: center;
+		border-bottom: 1px solid #ccc;
+	}
+}
+

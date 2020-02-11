@@ -1,0 +1,691 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+}
+
+@font-face{
+	font-family: "Open Sans";
+	src: url("../fonts/OpenSans-Light.ttf");
+}
+
+html, body{
+	height: 100%;
+}
+
+.clear{
+	clear: both;
+}
+
+
+.container{
+	width: 75%;
+	max-width: 1280px;
+	margin: 0 auto;
+	/*background-color: green;*/
+}
+/*=======================================================================
+			HEADER
+=========================================================================
+*/
+header.header-geral{
+	width: 100%;
+	/*height: 90vh;*/
+	padding-top: 50px;
+	background-image: url("../images/capa.png");
+	background-size: cover;
+	background-position: center;
+}
+
+header.header-geral .section-navegacao .container{
+	width: 90%;
+}
+
+header.header-geral .section-navegacao div.img-logo{
+	width: 15%;
+	padding: 4% 0;
+	min-width: 140px;
+	min-height: 70px;
+	float: left;
+	background-color: #ccc;
+}
+
+/*		DESKTOP		*/
+header.header-geral .section-navegacao nav.menu-desktop{
+	float: right;
+}
+
+header.header-geral .section-navegacao nav.menu-desktop ul li{
+	display: inline-block;
+	padding: 0 10px;
+}
+
+header.header-geral .section-navegacao nav.menu-desktop ul li a{
+	color: #eee;
+	text-decoration: none;
+}
+
+header.header-geral .section-navegacao nav.menu-desktop ul li:nth-of-type(1){
+	font-weight: bold;
+}
+
+
+/*		MOBILE		*/
+header.header-geral .section-navegacao nav.menu-mobile{
+	float: right;
+	display: none;
+}
+
+/*		CONTENT 1	*/
+.header-geral .section-content1 .container{
+	padding-top: 8%;
+	padding-bottom: 8%;
+}
+.header-geral .section-content1 .container .content1{
+	width: 60%;
+	color: white;
+	float: right;
+}
+
+.header-geral .section-content1 .container .content1 h2{
+	font-size: 37px;
+}
+.header-geral .section-content1 .container .content1 h2 > span{
+	display: block;
+}
+
+.header-geral .section-content1 .container .content1 p{
+	font-size: 16px;
+	padding: 20px 0;
+	/*text-align: justify;*/
+}
+
+/*=======================================================================
+			MAIN
+=========================================================================
+*/
+
+/*=======================================================================
+			CONTENT2
+=========================================================================
+*/
+
+main.conteudo-principal .section-content2{
+	background-color: #472562;
+}
+
+main.conteudo-principal .section-content2 .container{
+	position: relative;
+	height: 400px;
+}
+
+main.conteudo-principal .section-content2 .content2{
+	width: 40%;
+	float: left;
+	color: white;
+	padding-top: 50px;
+}
+	
+main.conteudo-principal .section-content2 .content2 h2{
+	font-size: 32px;
+	font-weight: normal;
+	white-space: nowrap;
+}
+main.conteudo-principal .section-content2 .content2 h3{
+	font-size: 16px;
+	padding-top: 30px;
+	font-weight: normal;
+	white-space: nowrap;
+}
+
+main.conteudo-principal .section-content2 .content2 ul{
+	list-style-position: inside;
+	font-weight: bold;
+}
+
+main.conteudo-principal .section-content2 .content2 .btn-contato{
+	background-color: rgb(255,92,41);
+	display: inline-block;
+	padding: 7px 24px;
+	border-radius: 40px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+main.conteudo-principal .section-content2 .content2 .btn-contato:hover{
+	background-color: rgb(255,112,61);
+}
+
+/*		IMG-DEVICE		*/
+main.conteudo-principal .section-content2 .img-device{
+	width: 60%;
+	height: 120%;
+	float: right;
+	position: absolute;
+	top: -20%;
+	right: 0;
+
+	background-image: url("../images/img-device.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	/*background-color: green;*/
+
+}
+/*=======================================================================
+			CONTENT3
+=========================================================================
+*/
+main section.section-content3 .container{
+	text-align: center;
+}
+
+main section.section-content3 .content3{
+	color: #472663;
+}
+
+main section.section-content3 .content3 h2{
+	font-weight: normal;
+	font-size: 33px;
+	padding-top: 100px;
+}
+
+/*=======================================================================
+			INTEGRANTES
+=========================================================================
+*/
+main section.section-integrantes{
+	position: relative;
+}
+
+main section.section-integrantes .parts-wrapper{
+	width: 100%;
+	height: 60%;
+	position: absolute;
+	top: 40%;
+}
+main section.section-integrantes .parts-wrapper .part1{
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: #835FA7;
+}
+main section.section-integrantes .parts-wrapper .part2{
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: #F3F7FB;
+}
+
+main section.section-integrantes .container{
+	width: 65%;
+	position: relative;
+}
+main section.section-integrantes img{
+	width: 100%;
+	margin: 50px auto;
+	display: block;
+	-webkit-box-shadow: 0px 35px 50px 1px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 35px 50px 1px rgba(0,0,0,0.4);
+	box-shadow: 0px 35px 50px 1px rgba(0,0,0,0.4);
+}
+
+/*    PARTE 1   */
+main .section-integrantes .time{
+	width: 50%;
+	float: left;
+	color: white;
+	padding-bottom: 40px;
+}
+
+main .section-integrantes .time .time-wrapper{
+	float: right;
+	padding-right: 40px;
+	text-align: justify;
+}
+main .section-integrantes .time .time-wrapper h2{
+	font-weight: normal;
+	font-style: italic;
+	font-size: 30px;
+}
+
+
+/*    PARTE 2   */
+main .section-integrantes .integrantes{
+	width: 50%;
+	float: left;
+	color: #232323;
+	padding-bottom: 40px;
+	/*background-color: pink;*/
+}
+
+main .section-integrantes .integrantes .integrantes-wrapper{
+	float: left;
+	padding-left: 40px;
+	text-align: justify;
+}
+
+main .section-integrantes .integrantes .integrantes-wrapper .nome-funcao{
+	height: 60px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+main .section-integrantes .integrantes .integrantes-wrapper .nome-funcao h2{
+	font-weight: normal;
+	font-style: italic;
+	font-size: 28px;
+}
+main .section-integrantes .integrantes .integrantes-wrapper .nome-funcao h3{
+	font-weight: normal;
+	font-size: 14px;
+}
+
+main .section-integrantes .integrantes .integrantes-wrapper .img-integrante{
+	width: 60px;
+	height: 60px;
+	background-image: url("../images/");
+	background-color: #ccc;
+	border-radius: 30px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+main .section-integrantes .integrantes .integrantes-wrapper .slider-wrapper{
+	padding-top: 10px;
+}
+main .section-integrantes .integrantes .integrantes-wrapper .slider-wrapper span{
+	width: 16px;
+	height: 16px;
+	background-color: #ccc;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+}
+main .section-integrantes .integrantes .integrantes-wrapper .slider-wrapper span:first-child{
+	background-color: black;
+}
+
+
+/*=======================================================================
+			SECTION CONTATO
+=========================================================================
+*/
+main section.section-contato{
+	background-color: #472563;
+	color: white;
+}
+
+main section.section-contato .container{
+	padding: 100px 0;
+	/*background-color: padding: ink;*/
+}
+
+
+main section.section-contato .contato{
+	width: 45%;
+	float: left;
+}
+main section.section-contato .visita{
+	width: 45%;
+	float: right;
+}
+
+
+main section.section-contato .contato form .header-formulario h2,
+main section.section-contato .visita h2{
+	font-weight: normal;
+	font-size: 35px;
+	padding-bottom: 15px;
+}
+
+main section.section-contato .contato form .section-formulario{
+	/*background-color: pink;*/
+	height: 390px;
+}
+
+main section.section-contato .contato form .section-formulario p{
+	text-align: justify;
+	height: 20%;
+}
+
+main section.section-contato .contato form .section-formulario input[type=text],
+main section.section-contato .contato form .section-formulario input[type=email],
+main section.section-contato .contato form .section-formulario textarea.menssagem{
+	width: 100%;
+	height: 15%;
+	display: block;
+	padding: 0 10px;
+	margin: 13px 0;
+}
+main section.section-contato .contato form .section-formulario input[type=text]:focus,
+main section.section-contato .contato form .section-formulario input[type=email]:focus,
+main section.section-contato .contato form .section-formulario textarea.menssagem:focus,
+main section.section-contato .contato form input[type=submit]:focus{
+	outline: 0;
+}
+
+main section.section-contato .contato form .section-formulario textarea.menssagem{
+	resize: none;
+	height: 40%;
+	padding: 10px;
+}
+
+main section.section-contato .contato form input[type=submit]{
+	width: 25%;
+	padding: 10px 0;
+	color: white;
+	font-weight: bold;
+	background-color: rgb(255,92,41);
+	border: 2px solid rgb(255,92,41);
+	/*border-radius: 20px;*/
+	margin-top: 10px;
+	cursor: pointer;
+	background-clip: padding-box;
+}
+main section.section-contato .contato form input[type=submit]:hover{
+	background-color: rgb(255,112,61);
+	border: 2px solid rgb(255,112,61);
+}
+main section.section-contato .contato form input[type=submit]:active{
+	border: 2px solid rgba(0,0,0,0);
+}
+
+main section.section-contato .visita .map-wrapper{
+	height: 100%;
+}
+main section.section-contato .visita .map{
+	width: 100%;
+	height: 390px;
+	background-color: #ccc;
+}
+
+/*=======================================================================
+			FOOTER
+=========================================================================
+*/
+footer.footer-geral{
+	width: 100%;
+	background-color: #192123;
+	color: white;
+}
+
+footer.footer-geral .container{
+	padding: 30px 0;
+}
+
+footer.footer-geral .contato-footer{
+	float: left;
+}
+
+footer.footer-geral .msg-footer{
+	float: right;
+}
+
+/*=======================================================================
+			MEDIA QUERIES
+=========================================================================
+*/
+/*	========== 1080px ====================*/
+@media screen and (max-width: 1080px){
+
+	/*--------------------------
+			FONTES
+	------------------------------*/
+	.header-geral .section-content1 .container .content1 h2{
+		font-size: 33px;
+	}
+	.header-geral .section-content1 .container .content1 p{
+		font-size: 14px;
+	}
+
+
+	main section.section-content3 .content3 h2{
+		font-size: 30px;
+	}
+	main section.section-content3 .content3 p{
+		font-size: 14px;
+	}
+
+
+	/*--------------------------
+			DEMAIS
+	------------------------------*/
+
+	main.conteudo-principal .section-content2 .container{
+		position: relative;
+		height: auto;
+	}
+	main.conteudo-principal .section-content2 .content2{
+		width: 100%;
+		float: none;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+	main.conteudo-principal .section-content2 .content2 ul{
+		text-align: left;
+		display: inline-block;
+		padding-bottom: 20px;
+	}
+	main.conteudo-principal .section-content2 .content2 .btn-contato{
+		display: block;
+		width: 30%;
+		margin: 0 auto;
+	}
+	main.conteudo-principal .section-content2 .img-device{
+		display: none;
+	}
+
+
+	main section.section-integrantes .container{
+		width: 90%;
+	}
+	main section.section-integrantes .container img{
+		width: 75%;
+	}
+
+
+	main section.section-contato .contato form .header-formulario h2,
+	main section.section-contato .visita h2{
+		font-size: 30px;
+	}
+
+	main section.section-contato .contato form .section-formulario,
+	main section.section-contato .visita .map{
+		height: 330px;
+	}
+
+	main section.section-contato .contato form .section-formulario p{
+		font-size: 14px;
+	}
+
+	main section.section-contato .contato form .section-formulario input[type=text],
+	main section.section-contato .contato form .section-formulario input[type=email],
+	main section.section-contato .contato form .section-formulario textarea.menssagem{
+		margin: 11px 0;
+	}
+}
+		
+/*	========== 920px ====================*/
+@media screen and (max-width: 920px){
+	.header-geral .section-content1 .container .content1 h2{
+		font-size: 28px;
+	}
+
+
+	main section.section-contato .contato form .section-formulario,
+	main section.section-contato .visita .map{
+		height: 300px;
+	}
+
+	main section.section-contato .contato form .section-formulario p{
+		font-size: 12px;
+	}
+
+	main section.section-contato .contato form .section-formulario input[type=text],
+	main section.section-contato .contato form .section-formulario input[type=email],
+	main section.section-contato .contato form .section-formulario textarea.menssagem{
+		margin: 10px 0;
+	}
+}
+/*	========== 768px ====================*/
+@media screen and (max-width: 768px){
+	.container{
+		width: 90%;
+	}
+
+
+	header.header-geral .section-navegacao nav.menu-desktop{
+		float: right;
+		display: none;
+	}
+	header.header-geral .section-navegacao nav.menu-mobile{
+		float: right;
+		display: block;
+		width: 60%;
+		text-align: center;
+		/*background-color: green;*/
+	}
+	header.header-geral .section-navegacao nav.menu-mobile .menu-img{
+		height: 70px;
+		width: 70px;
+		margin-left: calc(100% - 70px);
+		background-image: url("../images/menu.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		cursor: pointer;
+	}
+	header.header-geral .section-navegacao nav.menu-mobile ul{
+		opacity: 0;
+		transition-duration: 1s;
+	}
+	header.header-geral .section-navegacao nav.menu-mobile ul li{
+		/*opacity: 0;*/
+		width: 100%;
+		border: 1px solid black;
+		display: block;
+		background-color: #ddd;
+		padding: 5px 0;
+	}
+	header.header-geral .section-navegacao nav.menu-mobile ul:hover{
+		opacity: 1;
+	}
+	header.header-geral .section-navegacao nav.menu-mobile ul li:hover{
+		background-color: #eee;
+	}
+	header.header-geral .section-navegacao nav.menu-mobile ul li a{
+		text-decoration: none;
+	}
+
+
+	/*		CONTENT 1	*/
+	.header-geral .section-content1 .container{
+		padding-top: 5%;
+		padding-bottom: 10%;
+	}
+	.header-geral .section-content1 .container .content1{
+		width: 100%;
+		color: white;
+		float: none;
+		text-align: center;
+	}
+
+	.header-geral .section-content1 .container .content1 h2{
+		font-size: 37px;
+	}
+	.header-geral .section-content1 .container .content1 h2 > span{
+		display: block;
+	}
+
+	.header-geral .section-content1 .container .content1 p{
+		font-size: 14px;
+		padding: 20px 0;
+		text-align: justify;
+	}
+
+
+	main section.section-integrantes .parts-wrapper{
+		display: none;
+	}
+	main section.section-integrantes .container{
+		width: 100%;
+	}
+	main section.section-integrantes .time,
+	main section.section-integrantes .integrantes{
+		float: none;
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+		padding: 5% 0;
+	}
+	main section.section-integrantes .time{
+		background-color: #835FA7;
+	}
+
+	main .section-integrantes .time .time-wrapper{
+		width: 90%;
+		display: block;
+		margin: 0 auto;
+		float: none;
+		padding-right: 0px;
+		text-align: justify;
+	}
+	main .section-integrantes .integrantes{
+		background-color: #F3F7FB;
+	}
+	main .section-integrantes .integrantes .integrantes-wrapper{
+		width: 90%;
+		display: block;
+		margin: 0 auto;
+		float: none;
+		padding-left: 0px;
+	}
+
+
+	main section.section-contato .container{
+		padding: 100px 0;
+		/*background-color: padding: ink;*/
+	}
+
+
+	main section.section-contato .contato{
+		width: 90%;
+		float: none;
+		padding-bottom: 10%;
+		margin: 0 auto;
+	}
+	main section.section-contato .contato form .header-formulario h2,
+	main section.section-contato .visita h2{
+		font-size: 33px;
+	}
+	main section.section-contato .contato form .section-formulario p{
+		font-size: 15px;
+	}
+	main section.section-contato .visita{
+		width: 90%;
+		float: none;
+		margin: 0 auto;
+	}
+
+
+	footer.footer-geral .contato-footer, footer.footer-geral .msg-footer{
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+		padding: 5px 0
+	}
+}
+
+/*	========== 540px ====================*/
+@media screen and (max-width: 540px){
+	main.conteudo-principal .section-content2 .content2 h2{
+		font-size: 30px;
+		white-space: normal;
+	}
+	main.conteudo-principal .section-content2 .content2 h3{
+		font-size: 16px;
+		white-space: normal;
+	}
+
+}
+
